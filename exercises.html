@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercises - Communication Gym</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>💡 Communication Exercises</h1>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="resources.html">📚 Resources</a>
+    </nav>
+  </header>
+
+  <section>
+    <div class="exercise-card" onclick="toggleDesc('desc1')">
+      🗣️ Public Speaking
+      <div class="exercise-desc" id="desc1">
+        Practice short speeches in front of a mirror or friends. Focus on clarity, gestures, and confidence.
+      </div>
+    </div>
+
+    <div class="exercise-card" onclick="toggleDesc('desc2')">
+      👂 Active Listening
+      <div class="exercise-desc" id="desc2">
+        Listen carefully without interrupting. Repeat their points to ensure understanding.
+      </div>
+    </div>
+
+    <div class="exercise-card" onclick="toggleDesc('desc3')">
+      📝 Storytelling
+      <div class="exercise-desc" id="desc3">
+        Pick a topic and tell a short story. Structure your ideas clearly and engage your audience.
+      </div>
+    </div>
+
+    <!-- User Idea Section -->
+    <div id="userSection">
+      <h2>🌟 Share Your Idea</h2>
+      <textarea id="userIdea" placeholder="Write your idea or a new exercise here..."></textarea><br>
+      <button onclick="saveIdea('userIdea','savedText','greeting')">Save My Idea</button>
+      <p id="savedText"></p>
+    </div>
+
+    <!-- Feedback Section -->
+    <div id="feedbackSection">
+      <h2>📝 Feedback</h2>
+      <p>We’d love to hear your thoughts about the Communication Gym:</p>
+      <textarea id="userFeedback" placeholder="Leave your feedback here..."></textarea><br>
+      <button onclick="saveFeedback('userFeedback','feedbackSaved','feedbackGreeting')">Submit Feedback</button>
+      <p id="feedbackSaved"></p>
+      <div id="feedbackGreeting" style="display:none;">
+        🙌 Thank you for your feedback! Keep practicing and stay motivated! 🌟
+      </div>
+    </div>
+  </section>
+</body>
+</html>
